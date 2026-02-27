@@ -1,246 +1,258 @@
-# FreshMart - Online Grocery Store
+FreshMart - Online Grocery Store
 
 A fully functional grocery store built with Next.js 16, MongoDB, and custom authentication.
 
-## 🎥 Demo Video
+🎥 Demo Video
 
 Watch the full working demo here:
-👉 [https://docs.google.com/videos/d/1bz7Xf6z1zkw-11oaw-VyGLoFOIivy4QPl7KmYaKNKuU/edit?usp=sharing](https://docs.google.com/videos/d/1bz7Xf6z1zkw-11oaw-VyGLoFOIivy4QPl7KmYaKNKuU/edit?usp=sharing)
+👉 https://drive.google.com/file/d/1it2IzPLJw6vRG-LuojHITPi3qdeV-iph/view?usp=sharing
 
----
+Features
 
-## Features
+Browse products by category
 
-* Browse products by category
-* Add items to shopping cart
-* User authentication (signup/login)
-* Guest checkout available
-* Order tracking
-* Delivery address and order notes
-* Responsive design with fresh green theme
+Add items to shopping cart
 
----
+User authentication (signup/login)
 
-## Tech Stack
+Guest checkout available
 
-* **Framework**: Next.js 16 (App Router)
-* **Database**: MongoDB
-* **Authentication**: Custom JWT-based auth with bcrypt
-* **Styling**: Tailwind CSS
-* **UI Components**: Radix UI + shadcn/ui
-* **State Management**: React Context API
-* **Notifications**: Sonner
+Order tracking
 
----
+Delivery address and order notes
 
-## Getting Started
+Responsive design with fresh green theme
 
-### Prerequisites
+Tech Stack
 
-* Node.js 18+ and pnpm
-* MongoDB database (local or cloud like MongoDB Atlas)
+Framework: Next.js 16 (App Router)
 
-### Environment Variables
+Database: MongoDB
 
-Create a `.env.local` file in the root directory:
+Authentication: Custom JWT-based auth with bcrypt
 
-```env
+Styling: Tailwind CSS
+
+UI Components: Radix UI + shadcn/ui
+
+State Management: React Context API
+
+Notifications: Sonner
+
+Getting Started
+Prerequisites
+
+Node.js 18+ and pnpm
+
+MongoDB database (local or cloud like MongoDB Atlas)
+
+Environment Variables
+
+Create a .env.local file in the root directory:
+
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key_here
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
-```
+Installation
 
-### Installation
+Install dependencies:
 
-1. Install dependencies:
-
-```bash
 pnpm install
-```
 
-2. Seed the database with sample products:
+Seed the database with sample products:
 
-```bash
 pnpm seed
-```
 
-3. Run the development server:
+Run the development server:
 
-```bash
 pnpm dev
-```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open http://localhost:3000
+ in your browser.
 
----
-
-## Project Structure
-
-```
+Project Structure
 ├── app/
-│   ├── api/               
-│   │   ├── auth/          
-│   │   ├── products/      
-│   │   ├── categories/    
-│   │   └── orders/        
-│   ├── cart/              
-│   ├── checkout/          
-│   ├── orders/            
-│   ├── products/          
-│   └── page.tsx           
+│   ├── api/
+│   │   ├── auth/
+│   │   ├── products/
+│   │   ├── categories/
+│   │   └── orders/
+│   ├── cart/
+│   ├── checkout/
+│   ├── orders/
+│   ├── products/
+│   └── page.tsx
 ├── components/
-│   ├── ui/                
-│   ├── Header.tsx         
-│   ├── Footer.tsx         
-│   └── AuthDialog.tsx     
+│   ├── ui/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── AuthDialog.tsx
 ├── contexts/
-│   ├── AuthContext.tsx    
-│   └── CartContext.tsx    
+│   ├── AuthContext.tsx
+│   └── CartContext.tsx
 ├── lib/
-│   ├── models/            
-│   │   ├── User.ts        
-│   │   ├── Product.ts     
-│   │   └── Order.ts       
-│   ├── mongodb.ts         
-│   └── auth.ts            
+│   ├── models/
+│   │   ├── User.ts
+│   │   ├── Product.ts
+│   │   └── Order.ts
+│   ├── mongodb.ts
+│   └── auth.ts
 └── scripts/
-    └── seed-products.ts   
-```
+    └── seed-products.ts
+Features Overview
+Products
 
----
+20+ sample products across 6 categories
 
-## Features Overview
+Product images (emoji placeholders)
 
-### Products
+Stock management
 
-* 20+ sample products across 6 categories
-* Product images (emoji placeholders)
-* Stock management
-* Featured products
-* Category filtering
+Featured products
 
-### Shopping Cart
+Category filtering
 
-* Add/remove items
-* Update quantities
-* Persistent cart (localStorage)
-* Real-time total calculation
+Shopping Cart
 
-### Checkout
+Add/remove items
 
-* Guest or authenticated checkout
-* Collect customer information
-* Delivery address
-* Order notes
-* Order confirmation page
+Update quantities
 
-### Authentication
+Persistent cart (localStorage)
 
-* Custom JWT-based authentication
-* Secure password hashing with bcrypt
-* Persistent sessions
-* User profile data
+Real-time total calculation
 
-### Categories
+Checkout
 
-* Fruits
-* Vegetables
-* Dairy
-* Meat
-* Bakery
-* Pantry
+Guest or authenticated checkout
 
----
+Collect customer information
 
-## API Endpoints
+Delivery address
 
-### Authentication
+Order notes
 
-* `POST /api/auth/signup`
-* `POST /api/auth/login`
-* `POST /api/auth/logout`
-* `GET /api/auth/me`
+Order confirmation page
 
-### Products
+Authentication
 
-* `GET /api/products`
-* `GET /api/products/[id]`
+Custom JWT-based authentication
 
-### Categories
+Secure password hashing with bcrypt
 
-* `GET /api/categories`
+Persistent sessions
 
-### Orders
+User profile data
 
-* `POST /api/orders`
-* `GET /api/orders`
-* `GET /api/orders/[id]`
+Categories
 
----
+Fruits
 
-## Database Models
+Vegetables
 
-### User
+Dairy
 
-* Name, email, password (hashed)
-* Phone, address (optional)
-* Timestamps
+Meat
 
-### Product
+Bakery
 
-* Name, description, price
-* Category, unit, stock
-* Featured flag
-* Timestamps
+Pantry
 
-### Order
+API Endpoints
+Authentication
 
-* Customer information
-* Order items (with product details)
-* Pricing breakdown
-* Delivery address
-* Order notes
-* Status tracking
-* Timestamps
+POST /api/auth/signup
 
----
+POST /api/auth/login
 
-## Customization
+POST /api/auth/logout
 
-### Adding Products
+GET /api/auth/me
 
-Edit `scripts/seed-products.ts`, then run:
+Products
 
-```bash
+GET /api/products
+
+GET /api/products/[id]
+
+Categories
+
+GET /api/categories
+
+Orders
+
+POST /api/orders
+
+GET /api/orders
+
+GET /api/orders/[id]
+
+Database Models
+User
+
+Name, email, password (hashed)
+
+Phone, address (optional)
+
+Timestamps
+
+Product
+
+Name, description, price
+
+Category, unit, stock
+
+Featured flag
+
+Timestamps
+
+Order
+
+Customer information
+
+Order items (with product details)
+
+Pricing breakdown
+
+Delivery address
+
+Order notes
+
+Status tracking
+
+Timestamps
+
+Customization
+Adding Products
+
+Edit:
+
+scripts/seed-products.ts
+
+Then run:
+
 pnpm seed
-```
+Changing Theme
 
-### Changing Theme
+Edit color variables in:
 
-Edit color variables in `app/globals.css` under `:root`.
+app/globals.css
 
-### Adding Categories
+under :root.
+
+Adding Categories
 
 Add products with new category names. They will automatically appear in the filter.
 
----
+Production Deployment
 
-## Production Deployment
+Set up MongoDB database
 
-1. Set up MongoDB database
-2. Configure environment variables in Vercel
-3. Deploy:
+Configure environment variables in Vercel
 
-```bash
+Deploy:
+
 vercel deploy
-```
-
----
-
-## License
+License
 
 MIT
-
----
-
-If you want, I can also convert that Google video link into a clickable badge or thumbnail-style preview for GitHub.
