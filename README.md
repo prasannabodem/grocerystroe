@@ -5,7 +5,7 @@ A fully functional grocery store built with Next.js 16, MongoDB, and custom auth
 🎥 Demo Video
 
 Watch the full working demo here:
-👉 https://drive.google.com/file/d/1it2IzPLJw6vRG-LuojHITPi3qdeV-iph/view?usp=sharing
+👉 https://drive.google.com/file/d/1it2IzPLJw6vRG-LuojHITPi3qdeV-iph/view?usp=sharing 
 
 Features
 
